@@ -1,1 +1,1 @@
-# student-project
+# Student projects
