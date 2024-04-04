@@ -1,0 +1,4 @@
+1. Ensure the for loop in arrayUtils.js correctly initializes and populates the array.
+2. Verify that the for...of loop in processArray function iterates over array elements.
+3. Use console.log statements to check values during iterations.
+4. Check for off-by-one errors and correct loop conditions.
