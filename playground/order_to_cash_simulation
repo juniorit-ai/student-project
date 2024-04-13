@@ -1,0 +1,24 @@
+// ABAP Code to simulate the order to cash process in SAP SD
+REPORT simulate_order_to_cash.
+
+START-OF-SELECTION.
+  PERFORM create_sales_order.
+  PERFORM create_delivery.
+  PERFORM post_goods_issue.
+  PERFORM create_billing_document.
+
+FORM create_sales_order.
+  ... // Code to create a sales order
+ENDFORM.
+
+FORM create_delivery.
+  ... // Code to create a delivery document
+ENDFORM.
+
+FORM post_goods_issue.
+  ... // Code to post goods issue
+ENDFORM.
+
+FORM create_billing_document.
+  ... // Code to create a billing document
+ENDFORM.
