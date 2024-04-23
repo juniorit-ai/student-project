@@ -1,0 +1,1 @@
+const a = 5;\nconst b = '5';\nconsole.log(a === b); // false\nconsole.log(typeof a); // 'number'\nconsole.log(typeof b); // 'string'

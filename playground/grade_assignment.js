@@ -1,0 +1,1 @@
+const score = 85;\nlet grade;\nif (score >= 90) {\n  grade = 'A';\n} else if (score >= 80) {\n  grade = 'B';\n} else if (score >= 70) {\n  grade = 'C';\n} else if (score >= 60) {\n  grade = 'D';\n} else {\n  grade = 'F';\n}\nconsole.log(`The student's grade is ${grade}.`);
