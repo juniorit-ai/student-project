@@ -1,0 +1,1 @@
+// Placeholder for error handling logic to be completed by the student.
