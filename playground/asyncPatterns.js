@@ -1,0 +1,1 @@
+JavaScript code snippet demonstrating async patterns with promises
