@@ -1,0 +1,39 @@
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Bot</title>
+</head>
+<body>
+  <h1>AI-Powered Bot</h1>
+  <div id="chat"></div>
+  <input type="text" id="input" placeholder="Type a message...">
+  <button onclick="sendMessage()">Send</button>
+
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script>
+    const socket = io('http://localhost:4000');
+    const chat = document.getElementById('chat');
+    const input = document.getElementById('input');
+
+    socket.on('connect', () => {
+      chat.innerHTML += '<p>Connected to server</p>';
+    });
+
+    socket.on('response', (response) => {
+      chat.innerHTML += `<p>Bot: ${response}</p>`;
+    });
+
+    function sendMessage() {
+      const msg = input.value;
+      chat.innerHTML += `<p>You: ${msg}</p>`;
+      socket.emit('message', msg);
+      input.value = '';
+    }
+  </script>
+</body>
+</html>
+                            
